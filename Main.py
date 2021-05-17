@@ -57,8 +57,6 @@ def backtrack(state):
                 state.colorSet = colors
                 state.color = ''
                 return False
-    print("Some error") 
-    return False
 
 # Generates a random start state, gives each state a random color
 def generateStart(stateStrings, colors):
@@ -148,9 +146,6 @@ testTimes = 0
 while line.strip() != '':
     space = line.find(" ")
     firstState = line[:space]
-    if firstState not in allStates:
-        print("The newline does matter")
-        #sys.exit()
     secondState = line[space + 1:]
     firstStateObject = allStates.get(firstState)
     secondStateObject = allStates.get(secondState)
